@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Autocomplete",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License-(GPL)",
+    "homepage": "",
+    "description": "An extension that autosuggests the name of the product in create product admin section. (Using Ebay APIs)",
+    "authors": [
+    {
+        "name": "Jay Patel",
+        "email": "japatel@paypal.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Autocomplete</name>
+    <version>0.1.2</version>
+    <stability>stable</stability>
+    <license>GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>An extension that autosuggests the name of the product in create product admin section. (Using Ebay APIs)</summary>
+    <description>A wonderful extension that helps you autosuggest names on create product in admin section using Ebay APIs. This will help you match your product name with matching ebay names, making them more likely to be looked up by search engines. In future, we want to use amazon APIs, and autofill options that will fill up product descriptions from these APIs.</description>
+    <notes>We have a github project that people can contribute to, and make it a better extension</notes>
+    <authors><author><name>Jay Patel</name><user>jaypatel512</user><email>japatel@paypal.com</email></author><author><name>Roman Arora</name><user>roman2k</user><email>roarora@paypal.com</email></author></authors>
+    <date>2012-11-16</date>
+    <time>15:50:14</time>
+    <contents><target name="magelocal"><dir name="KD"><dir name="Adminsuggest"><dir name="Model"><file name="Observer.php" hash="427fbc617d6a915c47ca067dd95ed73b"/></dir><dir name="controllers"><file name="IndexController.php" hash="279e285a2c504a2dba16e6075d11a4bd"/></dir><dir name="etc"><file name="config.xml" hash="c8a5027994461316405d96a1620985bc"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="adminsuggest.xml" hash="155b27d985572b6c7a7570f1fb5be3d1"/></dir><dir name="template"><dir name="kd"><file name="adminsuggest.phtml" hash="5323b1b52ac13fece9cc23e811506a29"/><file name="extensioncontent.phtml" hash="e027a4a07e1b88220f69d33ada42e160"/></dir></dir></dir></dir></dir></target><target name="mage"><dir name="js"><dir name="kd"><file name="adminsuggest.js" hash="bad1c743075096db57d6b93fbe6f3e97"/><file name="extensioncontent.js" hash="3179f2255b046d5f2e9a71e365287bef"/><file name="jquery-ui.custom.js" hash="681eddbef4269747ef169a0f57bbf4b4"/><file name="jquery-ui.js" hash="4d269a2eeb9b56123125de264004aa6b"/><file name="jquery.cookie.js" hash="621cb6fcf57c3e29f9f06b8b00b0c030"/><file name="jquery.dynatree.min.js" hash="3a27445c48fc59288726b72a66986a18"/><file name="jquery.js" hash="cfa9051cc0b05eb519f1e16b2a6645d7"/><file name="ready.js" hash="8a2058881d6db576e94f0cd38b1f7d34"/></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><file name="adminsuggest.css" hash="5c20317fb0fc6e7091e86a1ad8dc196e"/><file name="jquery-ui.css" hash="442bbd256e4ad2dd9499f7cd455df1dd"/><dir name="images"><file name="ui-bg_flat_75_ffffff_40x100.png" hash="8692e6efddf882acbff144c38ea7dfdf"/><file name="ui-anim_basic_16x16.gif" hash="5a474bcbd8d2f2826f03d10ea44bf60e"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="KD_Adminsuggest.xml" hash="8225d742cc180142aa25af27ea2d72f7"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

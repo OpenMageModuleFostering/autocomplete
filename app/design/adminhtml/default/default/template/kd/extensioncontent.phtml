@@ -1,0 +1,46 @@
+<script type="text/javascript">
+    jQuery.noConflict();
+    // Custom compare function (optional) that sorts case insensitive
+    var cmp = function(a, b) {
+        n1 = (a.data.isFolder === "true");
+        n2 = (b.data.isFolder === "true");
+        return (n1 > n2 ? -1 : n1 < n2 ? 1 : 0);
+    };
+    function addHiddenInput(key, value){
+        var key_string = "extensioncontent[" + key + "]";
+        jQuery('<input type="hidden" class="field" name="'+ key_string  +'" value="' + value + '" />').appendTo('#extensioncontent');
+    }
+    jQuery(function(){
+        jQuery("#tree").dynatree({
+            checkbox: true,
+            selectMode: 3,
+            onSelect: function(select, node){
+                jQuery("#extensioncontent").empty();
+                var contents = node.tree.getSelectedNodes(true).each(function(data){
+                    addHiddenInput(data.data.key, data.data.title) ;
+                    //alert(data.data.key);
+                    //jQuery("#extensioncontent").val(contents);
+                });
+
+            }   ,
+            children: <?= $this->getProjectDirectoryStructureJson(); ?>
+
+        });
+        var node = jQuery("#tree").dynatree("getRoot");
+        node.sortChildren(cmp, true);
+
+    });
+
+</script>
+
+<div class="entry-edit">
+<div class="entry-edit-head">
+    <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__("Contents") ?></h4>
+</div>
+<div id="extensioncontent"></div>
+    <?php foreach ($this->getMageTargets() as $_value=>$_label): ?>
+    <span><?php echo $_value ?>: <?php echo $_label ?></span><br />
+    <?php endforeach ?>
+        <div id="tree">
+        </div>
+        </div>

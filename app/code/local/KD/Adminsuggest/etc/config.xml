@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <KD_Adminsuggest>
+            <version>0.1.0</version>
+        </KD_Adminsuggest>
+    </modules>
+
+    <global>
+        <models>
+            <kd_adminsuggest>
+                <class>KD_Adminsuggest_Model</class>
+            </kd_adminsuggest>
+        </models>
+    </global>
+    <frontend>
+        <routers>
+            <adminsuggest>
+                <use>standard</use>
+                <args>
+                    <module>KD_Adminsuggest</module>
+                    <frontName>adminsuggest</frontName>
+                </args>
+            </adminsuggest>
+        </routers>
+    </frontend>
+    <adminhtml>
+        <layout>
+            <updates>
+                <kd_adminsuggest>
+                    <file>adminsuggest.xml</file>
+                </kd_adminsuggest>
+            </updates>
+        </layout>
+    </adminhtml>
+
+</config>
