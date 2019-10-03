@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 An extension that autosuggests the name of the product in create product admin section. (Using Ebay APIs)
